@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-import sys, os, pygame, subprocess, commands, time, socket
+import sys, os, pygame, subprocess, time, socket
 import RPi.GPIO as GPIO
 from pygame.locals import *
 if "TFT" in os.environ and os.environ["TFT"] == "0":
@@ -341,12 +341,12 @@ def toggle_script(script):
 def kill_process(proc, file=":"):
     try:
         check = "ps auxww | grep [" + proc[0] + "]" + proc[1:] + " | grep " + file
-        status = commands.getoutput(check)
+        status = subprocess.getoutput(check)
         #print(status)
         if status:
             #Process exists, kill it
             kill = "kill $(" + check + " | awk '{print $2}')"
-            commands.getoutput(kill)
+            subprocess.getoutput(kill)
             return True
         else:
             return False
@@ -357,7 +357,7 @@ def kill_process(proc, file=":"):
 def check_process(proc, file=":"):
     try:
         check = "ps auxww | grep [" + proc[0] + "]" + proc[1:] + " | grep " + file
-        status = commands.getoutput(check)
+        status = subprocess.getoutput(check)
         #print(status)
         if status:
             return True
