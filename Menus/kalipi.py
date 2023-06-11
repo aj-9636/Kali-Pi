@@ -258,7 +258,7 @@ def get_ip():
 # Get hostname
 def get_hostname():
     pi_hostname = run_cmd("hostname")
-    pi_hostname = "  " + pi_hostname[:-1]
+    pi_hostname = "  " + str(pi_hostname[:-1])
     return pi_hostname
 
 def get_temp():
