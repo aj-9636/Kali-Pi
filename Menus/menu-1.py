@@ -9,14 +9,14 @@ from kalipi import *
 
 # Check VNC status
 def check_vnc():
-    if 'vnc :1' in commands.getoutput('/bin/ps -ef'):
+    if 'vnc :1' in subprocess.getoutput('/bin/ps -ef'):
         return True
     else:
         return False
 
 # Check Terminal session status
 def check_terminal():
-    if 'SCREEN -R -S term' in commands.getoutput('/bin/ps -ef'):
+    if 'SCREEN -R -S term' in subprocess.getoutput('/bin/ps -ef'):
         return True
     else:
         return False
@@ -91,18 +91,17 @@ def button(number):
             return
 
 	# VNC
-	if check_vnc():
-		kalipi.run_cmd("/usr/bin/vncserver -kill :1")
-		button5.fntColor = tron_whi
-		button5.draw()
-		pygame.display.update()
-
-	else:
-		kalipi.run_cmd("/usr/bin/vncserver :1")
-		button5.fntColor = green
-		button5.draw()
-		pygame.display.update()
-	return
+    if check_vnc():
+        kalipi.run_cmd("/usr/bin/vncserver -kill :1")
+        button5.fntColor = tron_whi
+        button5.draw()
+        pygame.display.update()
+    else:
+        kalipi.run_cmd("/usr/bin/vncserver :1")
+        button5.fntColor = green
+        button5.draw()
+        pygame.display.update()
+    return
 
     if number == 6:
         if button6.disable == 1:
@@ -115,16 +114,16 @@ def button(number):
         process = subprocess.call("setterm -term linux -back default -fore black -clear all", shell=True)
         os.execv(__file__, sys.argv)
 
-        if check_terminal():
-		button6.fntColor = green
-		button6.draw()
-		pygame.display.update()
+    if check_terminal():
+        button6.fntColor = green
+        button6.draw()
+        pygame.display.update()
 
-	else:
-		button6.fntColor = tron_whi
-		button6.draw()
-		pygame.display.update()
-	return
+    else:
+        button6.fntColor = tron_whi
+        button6.draw()
+        pygame.display.update()
+    return
 
 
     if number == 7:
@@ -224,11 +223,11 @@ def menu1():
     else:
         # Add button launch code here
         if check_vnc():
-	    button5.fntColor = green
-	    button5.draw()
+            button5.fntColor = green
+            button5.draw()
         else:
-	    button5.fntColor = tron_whi
-	    button5.draw()
+            button5.fntColor = tron_whi
+            button5.draw()
 
     # Button 6
     button6.disable = 0  # "1" disables button
