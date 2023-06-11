@@ -31,15 +31,15 @@ def check_terminal():
 
 # define all of the buttons
 titleButton = Button(" " + kalipi.get_hostname() + "    " + kalipi.get_ip(), originX, originX, buttonHeight, buttonWidth * 3 + spacing * 2, tron_blu, tron_ora, titleFont)
-button1 = Button(labelPadding * " " + "       Exit", originX, originY, buttonHeight, buttonWidth, tron_blu, tron_whi, labelFont)
-button2 = Button(labelPadding * " " + "  X on TFT", originX + buttonWidth + spacing, originY, buttonHeight, buttonWidth, tron_blu, tron_whi, labelFont)
-button3 = Button(labelPadding * " " + " X on HDMI", originX + (buttonWidth * 2) + (spacing * 2), originY, buttonHeight, buttonWidth, tron_blu, tron_whi, labelFont)
-button4 = Button(labelPadding * " " + "  Shutdown", originX, originY + buttonHeight + spacing, buttonHeight, buttonWidth, tron_blu, tron_whi, labelFont)
-button5 = Button(labelPadding * " " + "VNC Server", originX + buttonWidth + spacing, originY + buttonHeight + spacing, buttonHeight, buttonWidth, tron_blu, tron_whi, labelFont)
-button6 = Button(labelPadding * " " + "  Terminal", originX + (buttonWidth * 2) + (spacing * 2), originY + buttonHeight + spacing, buttonHeight, buttonWidth, tron_blu,tron_whi, labelFont)
-button7 = Button(labelPadding * " " + "    Reboot", originX, originY + (buttonHeight * 2) + (spacing * 2), buttonHeight, buttonWidth, tron_blu, tron_whi, labelFont)
-button8 = Button(labelPadding * " " + " Screen Off", originX + buttonWidth + spacing, originY + (buttonHeight * 2) + (spacing * 2), buttonHeight, buttonWidth, tron_blu, tron_whi, labelFont)
-button9 = Button(labelPadding * " " + "        >>>", originX + (buttonWidth * 2) + (spacing * 2), originY + (buttonHeight * 2) + (spacing * 2), buttonHeight, buttonWidth, tron_blu, tron_whi, labelFont)
+button1 = Button(labelPadding * " " + "       Exit", originX, originY, buttonHeight, buttonWidth, tron_blu, magenta, labelFont)
+button2 = Button(labelPadding * " " + "  X on TFT", originX + buttonWidth + spacing, originY, buttonHeight, buttonWidth, tron_blu, magenta, labelFont)
+button3 = Button(labelPadding * " " + " X on HDMI", originX + (buttonWidth * 2) + (spacing * 2), originY, buttonHeight, buttonWidth, tron_blu, magenta, labelFont)
+button4 = Button(labelPadding * " " + "  Shutdown", originX, originY + buttonHeight + spacing, buttonHeight, buttonWidth, tron_blu, magenta, labelFont)
+button5 = Button(labelPadding * " " + "VNC Server", originX + buttonWidth + spacing, originY + buttonHeight + spacing, buttonHeight, buttonWidth, tron_blu, magenta, labelFont)
+button6 = Button(labelPadding * " " + "  Terminal", originX + (buttonWidth * 2) + (spacing * 2), originY + buttonHeight + spacing, buttonHeight, buttonWidth, tron_blu,magenta, labelFont)
+button7 = Button(labelPadding * " " + "    Reboot", originX, originY + (buttonHeight * 2) + (spacing * 2), buttonHeight, buttonWidth, tron_blu, magenta, labelFont)
+button8 = Button(labelPadding * " " + " Screen Off", originX + buttonWidth + spacing, originY + (buttonHeight * 2) + (spacing * 2), buttonHeight, buttonWidth, tron_blu, magenta, labelFont)
+button9 = Button(labelPadding * " " + "        >>>", originX + (buttonWidth * 2) + (spacing * 2), originY + (buttonHeight * 2) + (spacing * 2), buttonHeight, buttonWidth, tron_blu, magenta, labelFont)
 
 
 
@@ -93,12 +93,12 @@ def button(number):
 	# VNC
     if check_vnc():
         kalipi.run_cmd("/usr/bin/vncserver -kill :1")
-        button5.fntColor = tron_whi
+        button5.fntColor = magenta
         button5.draw()
         pygame.display.update()
     else:
         kalipi.run_cmd("/usr/bin/vncserver :1")
-        button5.fntColor = green
+        button5.fntColor = magenta
         button5.draw()
         pygame.display.update()
     return
@@ -115,12 +115,12 @@ def button(number):
         os.execv(__file__, sys.argv)
 
     if check_terminal():
-        button6.fntColor = green
+        button6.fntColor = magenta
         button6.draw()
         pygame.display.update()
 
     else:
-        button6.fntColor = tron_whi
+        button6.fntColor = magenta
         button6.draw()
         pygame.display.update()
     return
@@ -223,10 +223,10 @@ def menu1():
     else:
         # Add button launch code here
         if check_vnc():
-            button5.fntColor = green
+            button5.fntColor = magenta
             button5.draw()
         else:
-            button5.fntColor = tron_whi
+            button5.fntColor = magenta
             button5.draw()
 
     # Button 6
@@ -237,10 +237,10 @@ def menu1():
     else:
         # Add button launch code here
         if check_terminal():
-            button6.fntColor = green
+            button6.fntColor = magenta
             button6.draw()
         else:
-            button6.fntColor = tron_whi
+            button6.fntColor = magenta
             button6.draw()
 
     # Third Row
