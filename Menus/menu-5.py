@@ -230,7 +230,7 @@ def button(number):
 def main (argv):
 
     # Outer Border
-    pygame.draw.rect(screen, tron_light, (0,0,screen_x,screen_y),10)
+    pygame.draw.rect(screen.canvas, tron_light, (0,0,screen_x,screen_y),10)
 
     #############################
     ##        Buttons          ##
