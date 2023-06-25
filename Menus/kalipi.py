@@ -273,7 +273,7 @@ def get_clock():
     process = subprocess.Popen(command.split(), stdout=subprocess.PIPE)
     output = process.communicate()[0]
     #clock = str(output).split("=")
-    clock = int(output) / 1024 /1024
+    clock = int(output.decode('utf-8')) / 1024 /1024
     clock = 'Clock: ' + str(clock) + "MHz"
     return clock
 
