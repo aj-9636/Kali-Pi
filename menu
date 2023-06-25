@@ -39,24 +39,24 @@ fi
 #export MENUDIR="/home/pi/Kali-Pi/Menus/"
 export MENUDIR=`dirname "$0"`/Menus/
 
-while true; do
-## Loop to make it a bit more difficult to bypass PIN
+# while true; do
+# ## Loop to make it a bit more difficult to bypass PIN
 
-    setterm -term linux -back default -fore black -clear all
+#     setterm -term linux -back default -fore black -clear all
 
-    if [ $KPPIN == "1" ]; then
-        startpage="menu-pin.py menu-1.py"
-        /usr/bin/clear
-        /usr/bin/env python $MENUDIR$startpage
-    else
-        startpage="menu-1.py"
-        /usr/bin/clear
-        /bin/bash $MENUDIR/launch-bg.sh
-        /usr/bin/env python $MENUDIR$startpage
-    fi
+#     if [ $KPPIN == "1" ]; then
+#         startpage="menu-pin.py menu-1.py"
+#         /usr/bin/clear
+#         /usr/bin/env python $MENUDIR$startpage
+#     else
+#         startpage="menu-1.py"
+#         /usr/bin/clear
+#         /bin/bash $MENUDIR/launch-bg.sh
+#         /usr/bin/env python $MENUDIR$startpage
+#     fi
 
- ##   if [ $? -eq 37 ]; then
- ##       break
- ##   fi
+#  ##   if [ $? -eq 37 ]; then
+#  ##       break
+#  ##   fi
 
-done
+# done
