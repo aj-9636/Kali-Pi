@@ -30,16 +30,16 @@ def check_terminal():
 ##        Buttons          ##
 
 # define all of the buttons
-titleButton = Button(" " + kalipi.get_hostname() + "    " + kalipi.get_ip(), originX, originX, buttonHeight, buttonWidth * 3 + spacing * 2, tron_blu, tron_ora, titleFont)
-button1 = Button(labelPadding * " " + "       Exit", originX, originY, buttonHeight, buttonWidth, tron_blu, magenta, labelFont)
-button2 = Button(labelPadding * " " + "  X on TFT", originX + buttonWidth + spacing, originY, buttonHeight, buttonWidth, tron_blu, magenta, labelFont)
-button3 = Button(labelPadding * " " + " X on HDMI", originX + (buttonWidth * 2) + (spacing * 2), originY, buttonHeight, buttonWidth, tron_blu, magenta, labelFont)
-button4 = Button(labelPadding * " " + "  Shutdown", originX, originY + buttonHeight + spacing, buttonHeight, buttonWidth, tron_blu, magenta, labelFont)
-button5 = Button(labelPadding * " " + "VNC Server", originX + buttonWidth + spacing, originY + buttonHeight + spacing, buttonHeight, buttonWidth, tron_blu, magenta, labelFont)
-button6 = Button(labelPadding * " " + "  Terminal", originX + (buttonWidth * 2) + (spacing * 2), originY + buttonHeight + spacing, buttonHeight, buttonWidth, tron_blu,magenta, labelFont)
-button7 = Button(labelPadding * " " + "    Reboot", originX, originY + (buttonHeight * 2) + (spacing * 2), buttonHeight, buttonWidth, tron_blu, magenta, labelFont)
-button8 = Button(labelPadding * " " + " Screen Off", originX + buttonWidth + spacing, originY + (buttonHeight * 2) + (spacing * 2), buttonHeight, buttonWidth, tron_blu, magenta, labelFont)
-button9 = Button(labelPadding * " " + "        >>>", originX + (buttonWidth * 2) + (spacing * 2), originY + (buttonHeight * 2) + (spacing * 2), buttonHeight, buttonWidth, tron_blu, magenta, labelFont)
+titleButton = Button(" " + kalipi.get_hostname() + "    " + kalipi.get_ip(), originX, originX, buttonHeight, buttonWidth * 3 + spacing * 2, magenta, tron_ora, titleFont)
+button1 = Button(labelPadding * " " + "       Exit", originX, originY, buttonHeight, buttonWidth, magenta, magenta, labelFont)
+button2 = Button(labelPadding * " " + "  X on TFT", originX + buttonWidth + spacing, originY, buttonHeight, buttonWidth, magenta, magenta, labelFont)
+button3 = Button(labelPadding * " " + " X on HDMI", originX + (buttonWidth * 2) + (spacing * 2), originY, buttonHeight, buttonWidth, magenta, magenta, labelFont)
+button4 = Button(labelPadding * " " + "  Shutdown", originX, originY + buttonHeight + spacing, buttonHeight, buttonWidth, magenta, magenta, labelFont)
+button5 = Button(labelPadding * " " + "VNC Server", originX + buttonWidth + spacing, originY + buttonHeight + spacing, buttonHeight, buttonWidth, magenta, magenta, labelFont)
+button6 = Button(labelPadding * " " + "  Terminal", originX + (buttonWidth * 2) + (spacing * 2), originY + buttonHeight + spacing, buttonHeight, buttonWidth, magenta,magenta, labelFont)
+button7 = Button(labelPadding * " " + "    Reboot", originX, originY + (buttonHeight * 2) + (spacing * 2), buttonHeight, buttonWidth, magenta, magenta, labelFont)
+button8 = Button(labelPadding * " " + " Screen Off", originX + buttonWidth + spacing, originY + (buttonHeight * 2) + (spacing * 2), buttonHeight, buttonWidth, magenta, magenta, labelFont)
+button9 = Button(labelPadding * " " + "        >>>", originX + (buttonWidth * 2) + (spacing * 2), originY + (buttonHeight * 2) + (spacing * 2), buttonHeight, buttonWidth, magenta, magenta, labelFont)
 
 
 
@@ -163,7 +163,7 @@ def menu1():
     # Init Pygame
     kalipi.screen()
     # Outer Border
-    kalipi.border(tron_blu)
+    kalipi.border(magenta)
 
     #############################
     ##        Buttons          ##
@@ -182,7 +182,7 @@ def menu1():
         button1.draw()
     else:
         # Add button launch code here
-        button1.fntColor = yellow
+        button1.fntColor = magenta
         button1.draw()
 
     # Button 2
@@ -212,7 +212,7 @@ def menu1():
         button4.draw()
     else:
         # Add button launch code here
-        button4.fntColor = yellow
+        button4.fntColor = magenta
         button4.draw()
 
     # Button 5
@@ -251,7 +251,7 @@ def menu1():
         button7.draw()
     else:
         # Add button launch code here
-        button7.fntColor = yellow
+        button7.fntColor = magenta
         button7.draw()
 
     # Button 8
