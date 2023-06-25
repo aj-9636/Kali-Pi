@@ -58,16 +58,16 @@ def check_mana_loud():
 ##        Buttons          ##
 
 # define all of the buttons
-titleButton = Button("                   EvilAP - Custom", originX, originX, buttonHeight, buttonWidth * 3 + spacing * 2, tron_inverse, titleFont)
-button1 = Button(labelPadding * " " + "  AP Open", originX, originY, buttonHeight, buttonWidth, tron_light, labelFont)
-button2 = Button(labelPadding * " " + "  AP Secure", originX + buttonWidth + spacing, originY, buttonHeight, buttonWidth, tron_light, labelFont)
-button3 = Button(labelPadding * " " + "       Mana", originX + (buttonWidth * 2) + (spacing * 2), originY, buttonHeight, buttonWidth, tron_light, labelFont)
-button4 = Button(labelPadding * " " + "       Beef", originX, originY + buttonHeight + spacing, buttonHeight, buttonWidth, tron_light, labelFont)
-button5 = Button(labelPadding * " " + "   Firelamb", originX + buttonWidth + spacing, originY + buttonHeight + spacing, buttonHeight, buttonWidth, tron_light, labelFont)
-button6 = Button(labelPadding * " " + "  Mana Loud", originX + (buttonWidth * 2) + (spacing * 2), originY + buttonHeight + spacing, buttonHeight, buttonWidth, tron_light, labelFont)
-button7 = Button(labelPadding * " " + "       <<<", originX, originY + (buttonHeight * 2) + (spacing * 2), buttonHeight, buttonWidth, tron_light, labelFont)
-button8 = Button(labelPadding * " " + "  DNS2Proxy", originX + buttonWidth + spacing, originY + (buttonHeight * 2) + (spacing * 2), buttonHeight, buttonWidth, tron_light, labelFont)
-button9 = Button(labelPadding * " " + "       >>>", originX + (buttonWidth * 2) + (spacing * 2), originY + (buttonHeight * 2) + (spacing * 2), buttonHeight, buttonWidth, tron_light, labelFont)
+titleButton = Button("                   EvilAP - Custom", originX, originX, buttonHeight, buttonWidth * 3 + spacing * 2, tron_inverse, tron_inverse, titleFont)
+button1 = Button(labelPadding * " " + "  AP Open", originX, originY, buttonHeight, buttonWidth, tron_light, tron_inverse, labelFont)
+button2 = Button(labelPadding * " " + "  AP Secure", originX + buttonWidth + spacing, originY, buttonHeight, buttonWidth, tron_light, tron_inverse, labelFont)
+button3 = Button(labelPadding * " " + "       Mana", originX + (buttonWidth * 2) + (spacing * 2), originY, buttonHeight, buttonWidth, tron_light, tron_inverse, labelFont)
+button4 = Button(labelPadding * " " + "       Beef", originX, originY + buttonHeight + spacing, buttonHeight, buttonWidth, tron_light, tron_inverse, labelFont)
+button5 = Button(labelPadding * " " + "   Firelamb", originX + buttonWidth + spacing, originY + buttonHeight + spacing, buttonHeight, buttonWidth, tron_light, tron_inverse, labelFont)
+button6 = Button(labelPadding * " " + "  Mana Loud", originX + (buttonWidth * 2) + (spacing * 2), originY + buttonHeight + spacing, buttonHeight, buttonWidth, tron_light, tron_inverse,labelFont)
+button7 = Button(labelPadding * " " + "       <<<", originX, originY + (buttonHeight * 2) + (spacing * 2), buttonHeight, buttonWidth, tron_light,tron_inverse, labelFont)
+button8 = Button(labelPadding * " " + "  DNS2Proxy", originX + buttonWidth + spacing, originY + (buttonHeight * 2) + (spacing * 2), buttonHeight, buttonWidth, tron_light, tron_inverse, labelFont)
+button9 = Button(labelPadding * " " + "       >>>", originX + (buttonWidth * 2) + (spacing * 2), originY + (buttonHeight * 2) + (spacing * 2), buttonHeight, buttonWidth, tron_light, tron_inverse, labelFont)
 
 
 def make_button(button):
