@@ -308,7 +308,7 @@ def toggle_service(srvc):
     start = "/usr/sbin/service " + srvc + " start"
     stop = "/usr/sbin/service " + srvc + " stop"
     status = run_cmd(check)
-    if ("is running" in status) or ("active (running)") in status:
+    if ("is running" in str(status)) or ("active (running)") in str(status):
         run_cmd(stop)
         return False
     else:
