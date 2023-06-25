@@ -227,7 +227,7 @@ def button(number):
 #############################
 
 
-def menu5():
+def menu5(argv):
     
     # Init screen
     kalipi.screen()
