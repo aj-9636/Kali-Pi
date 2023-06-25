@@ -295,7 +295,7 @@ def check_service(srvc):
     try:
         check = "/usr/sbin/service " + srvc + " status"
         status = run_cmd(check)
-        if ("is running" in status) or ("active (running)") in status:
+        if ("is running" in str(status)) or ("active (running)") in str(status):
             return True
         else:
             return False
