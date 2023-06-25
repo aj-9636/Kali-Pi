@@ -272,8 +272,8 @@ def get_clock():
     command = "vcgencmd measure_clock arm"
     process = subprocess.Popen(command.split(), stdout=subprocess.PIPE)
     output = process.communicate()[0]
-    clock = str(output).split("=")
-    clock = int(clock[1][:-1]) / 1024 /1024
+    #clock = str(output).split("=")
+    clock = int(output) / 1024 /1024
     clock = 'Clock: ' + str(clock) + "MHz"
     return clock
 
