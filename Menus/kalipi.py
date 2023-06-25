@@ -218,7 +218,7 @@ def screen():
     else:
         pygame.mouse.set_visible(0)
         
-    screen.canvas = pygame.display.set_mode(size)
+    screen.canvas = pygame.display.set_mode(size, pygame.NOFRAME)
 
     # Background Color
     screen.canvas.fill(black)
