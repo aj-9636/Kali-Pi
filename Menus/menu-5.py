@@ -227,10 +227,21 @@ def button(number):
 #############################
 
 
-def main (argv):
-
+def menu5():
+    
+    # Init screen
+    kalipi.screen()
     # Outer Border
-    pygame.draw.rect(screen.canvas, tron_light, (0,0,screen_x,screen_y),10)
+    kalipi.border(tron_blu)
+
+    #############################
+    ##        Buttons          ##
+
+    # Buttons and labels
+    # See variables at the top of the document to adjust the menu
+
+    # Title
+    titleButton.draw()
 
     #############################
     ##        Buttons          ##
@@ -376,5 +387,5 @@ def main (argv):
     #############################
 
 if __name__ == "__main__":
-    main(sys.argv[1:])
+    menu5(sys.argv[1:])
 
