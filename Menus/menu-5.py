@@ -74,9 +74,9 @@ def make_button(button):
     if button.disable == 1:
         button.color = grey
 
-    pygame.draw.rect(screen, tron_regular, (button.xpo-10,button.ypo-10,button.width,button.height),3)
-    pygame.draw.rect(screen, tron_light, (button.xpo-9,button.ypo-9,button.width-1,button.height-1),1)
-    pygame.draw.rect(screen, tron_regular, (button.xpo-8,button.ypo-8,button.width-2,button.height-2),1)
+    pygame.draw.rect(screen.canvas, tron_regular, (button.xpo-10,button.ypo-10,button.width,button.height),3)
+    pygame.draw.rect(screen.canvas, tron_light, (button.xpo-9,button.ypo-9,button.width-1,button.height-1),1)
+    pygame.draw.rect(screen.canvas, tron_regular, (button.xpo-8,button.ypo-8,button.width-2,button.height-2),1)
     font=pygame.font.Font(None,button.fntSize)
     label=font.render(str(button.text), 1, (button.color))
     screen.blit(label,(button.xpo,button.ypo+7))
