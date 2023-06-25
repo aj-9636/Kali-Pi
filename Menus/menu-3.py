@@ -24,7 +24,7 @@ def toggle_kismet():
         run_cmd(stop)
         return False
     else:
-	run_cmd(start)
+        run_cmd(start)
         return True
 
 # Toggle OpenVAS
@@ -37,7 +37,7 @@ def toggle_openvas():
         run_cmd(stop)
         return False
     else:
-	run_cmd(start)
+        run_cmd(start)
         return True
 
 # Toggle snort
@@ -57,14 +57,14 @@ def toggle_snort():
 
 # Check msf session status
 def check_msf():
-    if 'SCREEN -R -S msf' in commands.getoutput('/bin/ps -ef'):
+    if 'SCREEN -R -S msf' in subprocess.getoutput('/bin/ps -ef'):
         return True
     else:
         return False
 
 # Check kismet session status
 def check_kismet():
-    if 'SCREEN -R -S kismet' in commands.getoutput('/bin/ps -ef'):
+    if 'SCREEN -R -S kismet' in subprocess.getoutput('/bin/ps -ef'):
         return True
     else:
         return False
@@ -105,14 +105,14 @@ def button(number):
         os.execv(__file__, sys.argv)
 
         if check_msf():
-                button1.fntColor = green
-                button1.draw()
-                pygame.display.update()
+            button1.fntColor = green
+            button1.draw()
+            spygame.display.update()
 
         else:
-                button1.fntColor = tron_whi
-                button1.draw()
-                pygame.display.update()
+            button1.fntColor = tron_whi
+            button1.draw()
+            pygame.display.update()
         return
 
 
@@ -197,9 +197,9 @@ def button(number):
             return
 
         # Pulledpork
-	pygame.quit()
-	cmd="/usr/bin/sudo /bin/bash " + os.environ["MENUDIR"] + "pulledpork.sh"
-	call(cmd, shell=True)
+        pygame.quit()
+        cmd="/usr/bin/sudo /bin/bash " + os.environ["MENUDIR"] + "pulledpork.sh"
+        subprocess.call(cmd, shell=True)
         os.execv(__file__, sys.argv)
 
     if number == 7:
