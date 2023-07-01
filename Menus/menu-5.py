@@ -59,15 +59,15 @@ def check_mana_loud():
 
 # define all of the buttons
 titleButton = Button("                   EvilAP - Custom", originX, originX, buttonHeight, buttonWidth * 3 + spacing * 2, tron_inverse, tron_inverse, titleFont)
-button1 = Button(labelPadding * " " + "  AP Open", originX, originY, buttonHeight, buttonWidth, tron_light, tron_inverse, labelFont)
-button2 = Button(labelPadding * " " + "  AP Secure", originX + buttonWidth + spacing, originY, buttonHeight, buttonWidth, tron_light, tron_inverse, labelFont)
-button3 = Button(labelPadding * " " + "       Mana", originX + (buttonWidth * 2) + (spacing * 2), originY, buttonHeight, buttonWidth, tron_light, tron_inverse, labelFont)
-button4 = Button(labelPadding * " " + "       Beef", originX, originY + buttonHeight + spacing, buttonHeight, buttonWidth, tron_light, tron_inverse, labelFont)
-button5 = Button(labelPadding * " " + "   Firelamb", originX + buttonWidth + spacing, originY + buttonHeight + spacing, buttonHeight, buttonWidth, tron_light, tron_inverse, labelFont)
-button6 = Button(labelPadding * " " + "  Mana Loud", originX + (buttonWidth * 2) + (spacing * 2), originY + buttonHeight + spacing, buttonHeight, buttonWidth, tron_light, tron_inverse,labelFont)
-button7 = Button(labelPadding * " " + "       <<<", originX, originY + (buttonHeight * 2) + (spacing * 2), buttonHeight, buttonWidth, tron_light,tron_inverse, labelFont)
-button8 = Button(labelPadding * " " + "  DNS2Proxy", originX + buttonWidth + spacing, originY + (buttonHeight * 2) + (spacing * 2), buttonHeight, buttonWidth, tron_light, tron_inverse, labelFont)
-button9 = Button(labelPadding * " " + "       >>>", originX + (buttonWidth * 2) + (spacing * 2), originY + (buttonHeight * 2) + (spacing * 2), buttonHeight, buttonWidth, tron_light, tron_inverse, labelFont)
+button1 = Button(labelPadding * " " + "  AP Open", originX, originY, buttonHeight, buttonWidth, magenta, tron_inverse, labelFont)
+button2 = Button(labelPadding * " " + "  AP Secure", originX + buttonWidth + spacing, originY, buttonHeight, buttonWidth, magenta, tron_inverse, labelFont)
+button3 = Button(labelPadding * " " + "       Mana", originX + (buttonWidth * 2) + (spacing * 2), originY, buttonHeight, buttonWidth, magenta, tron_inverse, labelFont)
+button4 = Button(labelPadding * " " + "       Beef", originX, originY + buttonHeight + spacing, buttonHeight, buttonWidth, magenta, tron_inverse, labelFont)
+button5 = Button(labelPadding * " " + "   Firelamb", originX + buttonWidth + spacing, originY + buttonHeight + spacing, buttonHeight, buttonWidth, magenta, tron_inverse, labelFont)
+button6 = Button(labelPadding * " " + "  Mana Loud", originX + (buttonWidth * 2) + (spacing * 2), originY + buttonHeight + spacing, buttonHeight, buttonWidth, magenta, tron_inverse,labelFont)
+button7 = Button(labelPadding * " " + "       <<<", originX, originY + (buttonHeight * 2) + (spacing * 2), buttonHeight, buttonWidth, magenta,tron_inverse, labelFont)
+button8 = Button(labelPadding * " " + "  DNS2Proxy", originX + buttonWidth + spacing, originY + (buttonHeight * 2) + (spacing * 2), buttonHeight, buttonWidth, magenta, tron_inverse, labelFont)
+button9 = Button(labelPadding * " " + "       >>>", originX + (buttonWidth * 2) + (spacing * 2), originY + (buttonHeight * 2) + (spacing * 2), buttonHeight, buttonWidth, magenta, tron_inverse, labelFont)
 
 
 # def make_button(button):
@@ -75,7 +75,7 @@ button9 = Button(labelPadding * " " + "       >>>", originX + (buttonWidth * 2) 
 #         button.color = grey
 
 #     pygame.draw.rect(screen.canvas, tron_regular, (button.xpo-10,button.ypo-10,button.width,button.height),3)
-#     pygame.draw.rect(screen.canvas, tron_light, (button.xpo-9,button.ypo-9,button.width-1,button.height-1),1)
+#     pygame.draw.rect(screen.canvas, magenta, (button.xpo-9,button.ypo-9,button.width-1,button.height-1),1)
 #     pygame.draw.rect(screen.canvas, tron_regular, (button.xpo-8,button.ypo-8,button.width-2,button.height-2),1)
 #     font=pygame.font.Font(None,button.fntSize)
 #     label=font.render(str(button.text), 1, (button.color))
@@ -95,7 +95,7 @@ def button(number):
                 button1.draw()
                 pygame.display.update()
         else:
-                button1.color = tron_light
+                button1.color = magenta
                 button1.draw()
                 pygame.display.update()
         return
@@ -114,7 +114,7 @@ def button(number):
                 pygame.display.update()
         else:
         #Start Service
-                button2.color = tron_light
+                button2.color = magenta
                 button2.draw()
                 pygame.display.update()
 
@@ -126,7 +126,7 @@ def button(number):
         if check_mana():
         # Stop Mana
                 kalipi.run_cmd("sudo /usr/lib/mana-toolkit/hostapd_cli -p /var/run/hostapd mana_disable")
-                button3.color = tron_light
+                button3.color = magenta
                 button3.draw()
                 pygame.display.update()
         else:
@@ -147,7 +147,7 @@ def button(number):
                 pygame.display.update()
 
         else:
-                button4.color = tron_light
+                button4.color = magenta
                 button4.draw()
                 pygame.display.update()
         return
@@ -205,7 +205,7 @@ def button(number):
                 pygame.display.update()
         else:
         #Start Service
-                button8.color = tron_light
+                button8.color = magenta
                 button8.draw()
                 pygame.display.update()
         return
@@ -228,7 +228,7 @@ def menu5(argv):
     # Init screen
     kalipi.screen()
     # Outer Border
-    kalipi.border(tron_blu)
+    kalipi.border(magenta)
 
     #############################
     ##        Buttons          ##
@@ -256,7 +256,7 @@ def menu5(argv):
         if kalipi.check_process("hostapd", "mana.conf"):
             button1.draw()
         else:
-            button1.color = tron_light
+            button1.color = magenta
             button1.draw()
 
     # Button 2
@@ -270,7 +270,7 @@ def menu5(argv):
             button2.color = green
             button2.draw()
         else:
-            button2.color = tron_light
+            button2.color = magenta
             button2.draw()
 
     # Button 3
@@ -284,7 +284,7 @@ def menu5(argv):
             button3.color = green
             button3.draw()
         else:
-            button3.color = tron_light
+            button3.color = magenta
             button3.draw()
 
     # Second Row
@@ -299,7 +299,7 @@ def menu5(argv):
             button4.color = green
             button4.draw()
         else:
-            button4.color = tron_light
+            button4.color = magenta
             button4.draw()
 
     # Button 5
@@ -328,7 +328,7 @@ def menu5(argv):
             button6.color = green
             button6.draw()
         else:
-            button6.color = tron_light
+            button6.color = magenta
             button6.draw()
 
     # Third Row
@@ -352,7 +352,7 @@ def menu5(argv):
             button8.color = green
             button8.draw()
         else:
-            button8.color = tron_light
+            button8.color = magenta
             button8.draw()
 
     # Button 9

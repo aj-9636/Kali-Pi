@@ -78,16 +78,16 @@ def check_kismet():
 ##        Buttons          ##
 
 # define all of the buttons
-titleButton = Button("                        Misc Tools", originX, originX, buttonHeight, buttonWidth * 3 + spacing * 2, tron_blu, tron_ora, titleFont)
-button1 = Button(labelPadding * " " + "  Metasploit", originX, originY, buttonHeight, buttonWidth, tron_blu, tron_whi, labelFont)
-button2 = Button(labelPadding * " " + "  SDR-Scan", originX + buttonWidth + spacing, originY, buttonHeight, buttonWidth, tron_blu, tron_whi, labelFont)
-button3 = Button(labelPadding * " " + "     Kismet", originX + (buttonWidth * 2) + (spacing * 2), originY, buttonHeight, buttonWidth, tron_blu, tron_whi, labelFont)
-button4 = Button(labelPadding * " " + "    OpenVAS", originX, originY + buttonHeight + spacing, buttonHeight, buttonWidth, tron_blu, tron_whi, labelFont)
-button5 = Button(labelPadding * " " + "      Snort", originX + buttonWidth + spacing, originY + buttonHeight + spacing, buttonHeight, buttonWidth, tron_blu, tron_whi, labelFont)
-button6 = Button(labelPadding * " " + "  PulledPork", originX + (buttonWidth * 2) + (spacing * 2), originY + buttonHeight + spacing, buttonHeight, buttonWidth, tron_blu, tron_whi, labelFont)
-button7 = Button(labelPadding * " " + "        <<<", originX, originY + (buttonHeight * 2) + (spacing * 2), buttonHeight, buttonWidth, tron_blu, tron_whi, labelFont)
-button8 = Button(labelPadding * " " + " Screen Off", originX + buttonWidth + spacing, originY + (buttonHeight * 2) + (spacing * 2), buttonHeight, buttonWidth, tron_blu, tron_whi, labelFont)
-button9 = Button(labelPadding * " " + "        >>>", originX + (buttonWidth * 2) + (spacing * 2), originY + (buttonHeight * 2) + (spacing * 2), buttonHeight, buttonWidth, tron_blu, tron_whi, labelFont)
+titleButton = Button("                        Misc Tools", originX, originX, buttonHeight, buttonWidth * 3 + spacing * 2, magenta, tron_ora, titleFont)
+button1 = Button(labelPadding * " " + "  Metasploit", originX, originY, buttonHeight, buttonWidth, magenta, tron_whi, labelFont)
+button2 = Button(labelPadding * " " + "  SDR-Scan", originX + buttonWidth + spacing, originY, buttonHeight, buttonWidth, magenta, tron_whi, labelFont)
+button3 = Button(labelPadding * " " + "     Kismet", originX + (buttonWidth * 2) + (spacing * 2), originY, buttonHeight, buttonWidth, magenta, tron_whi, labelFont)
+button4 = Button(labelPadding * " " + "    OpenVAS", originX, originY + buttonHeight + spacing, buttonHeight, buttonWidth, magenta, tron_whi, labelFont)
+button5 = Button(labelPadding * " " + "      Snort", originX + buttonWidth + spacing, originY + buttonHeight + spacing, buttonHeight, buttonWidth, magenta, tron_whi, labelFont)
+button6 = Button(labelPadding * " " + "  PulledPork", originX + (buttonWidth * 2) + (spacing * 2), originY + buttonHeight + spacing, buttonHeight, buttonWidth, magenta, tron_whi, labelFont)
+button7 = Button(labelPadding * " " + "        <<<", originX, originY + (buttonHeight * 2) + (spacing * 2), buttonHeight, buttonWidth, magenta, tron_whi, labelFont)
+button8 = Button(labelPadding * " " + " Screen Off", originX + buttonWidth + spacing, originY + (buttonHeight * 2) + (spacing * 2), buttonHeight, buttonWidth, magenta, tron_whi, labelFont)
+button9 = Button(labelPadding * " " + "        >>>", originX + (buttonWidth * 2) + (spacing * 2), originY + (buttonHeight * 2) + (spacing * 2), buttonHeight, buttonWidth, magenta, tron_whi, labelFont)
 
 
 # Define each button press action
@@ -240,7 +240,7 @@ def menu3():
     # Init screen
     kalipi.screen()
     # Outer Border
-    kalipi.border(tron_blu)
+    kalipi.border(magenta)
 
     #############################
     ##        Buttons          ##

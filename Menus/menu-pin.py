@@ -28,19 +28,19 @@ newTitleFont = titleFont / 3 * 2
 ###########################
 
 # define all of the buttons
-titleButton = Button("       Environmental Survey    -    Humidity Sensor    ", newOriginX, newOriginX, buttonHeight, buttonWidth * 3  + spacing * 2, tron_blu, tron_ora, newTitleFont)
-button1 = Button(" " * 18 + "1", newOriginX, newOriginY, newButtonHeight, newButtonWidth, tron_blu, tron_whi, newLabelFont)
-button2 = Button(" " * 18 + "2", newOriginX + newButtonWidth + newSpacing, newOriginY, newButtonHeight, newButtonWidth, tron_blu, tron_whi, newLabelFont)
-button3 = Button(" " + " " * 18 + "3", newOriginX + (newButtonWidth * 2) + (newSpacing * 2), newOriginY, newButtonHeight, newButtonWidth, tron_blu, tron_whi, newLabelFont)
-button4 = Button(" " + " " * 18 + "4", newOriginX, newOriginY + newButtonHeight + newSpacing, newButtonHeight, newButtonWidth, tron_blu, tron_whi, newLabelFont)
-button5 = Button(" " + " " * 18 + "5", newOriginX + newButtonWidth + newSpacing, newOriginY + newButtonHeight + newSpacing, newButtonHeight, newButtonWidth, tron_blu, tron_whi, newLabelFont)
-button6 = Button(" " + " " * 18 + "6", newOriginX + (newButtonWidth * 2) + (newSpacing * 2), newOriginY + newButtonHeight + newSpacing, newButtonHeight, newButtonWidth, tron_blu, tron_whi, newLabelFont)
-button7 = Button(" " + " " * 18 + "7", newOriginX, newOriginY + (newButtonHeight * 2) + (newSpacing * 2), newButtonHeight, newButtonWidth, tron_blu, tron_whi, newLabelFont)
-button8 = Button(" " + " " * 18 + "8", newOriginX + newButtonWidth + newSpacing, newOriginY + (newButtonHeight * 2) + (newSpacing * 2), newButtonHeight, newButtonWidth, tron_blu, tron_whi, newLabelFont)
-button9 = Button(" " + " " * 18 + "9", newOriginX + (newButtonWidth * 2) + (newSpacing * 2), newOriginY + (newButtonHeight * 2) + (newSpacing * 2), newButtonHeight, newButtonWidth, tron_blu, tron_whi, newLabelFont)
-buttonc = Button(newLabelPadding * " " + "          CLEAR", newOriginX, newOriginY + (newButtonHeight * 3) + (newSpacing * 3), newButtonHeight, newButtonWidth, tron_blu, tron_whi, newLabelFont)
-button0 = Button(" " * 18 + "0", newOriginX + newButtonWidth + newSpacing, newOriginY + (newButtonHeight * 3) + (newSpacing * 3), newButtonHeight, newButtonWidth, tron_blu, tron_whi, newLabelFont)
-buttone = Button(newLabelPadding * " " + "          ENTER", newOriginX + (newButtonWidth * 2) + (newSpacing * 2), newOriginY + (newButtonHeight * 3) + (newSpacing * 3), newButtonHeight, newButtonWidth, tron_blu, tron_whi, newLabelFont)
+titleButton = Button("       Environmental Survey    -    Humidity Sensor    ", newOriginX, newOriginX, buttonHeight, buttonWidth * 3  + spacing * 2, magenta, tron_ora, newTitleFont)
+button1 = Button(" " * 18 + "1", newOriginX, newOriginY, newButtonHeight, newButtonWidth, magenta, tron_whi, newLabelFont)
+button2 = Button(" " * 18 + "2", newOriginX + newButtonWidth + newSpacing, newOriginY, newButtonHeight, newButtonWidth, magenta, tron_whi, newLabelFont)
+button3 = Button(" " + " " * 18 + "3", newOriginX + (newButtonWidth * 2) + (newSpacing * 2), newOriginY, newButtonHeight, newButtonWidth, magenta, tron_whi, newLabelFont)
+button4 = Button(" " + " " * 18 + "4", newOriginX, newOriginY + newButtonHeight + newSpacing, newButtonHeight, newButtonWidth, magenta, tron_whi, newLabelFont)
+button5 = Button(" " + " " * 18 + "5", newOriginX + newButtonWidth + newSpacing, newOriginY + newButtonHeight + newSpacing, newButtonHeight, newButtonWidth, magenta, tron_whi, newLabelFont)
+button6 = Button(" " + " " * 18 + "6", newOriginX + (newButtonWidth * 2) + (newSpacing * 2), newOriginY + newButtonHeight + newSpacing, newButtonHeight, newButtonWidth, magenta, tron_whi, newLabelFont)
+button7 = Button(" " + " " * 18 + "7", newOriginX, newOriginY + (newButtonHeight * 2) + (newSpacing * 2), newButtonHeight, newButtonWidth, magenta, tron_whi, newLabelFont)
+button8 = Button(" " + " " * 18 + "8", newOriginX + newButtonWidth + newSpacing, newOriginY + (newButtonHeight * 2) + (newSpacing * 2), newButtonHeight, newButtonWidth, magenta, tron_whi, newLabelFont)
+button9 = Button(" " + " " * 18 + "9", newOriginX + (newButtonWidth * 2) + (newSpacing * 2), newOriginY + (newButtonHeight * 2) + (newSpacing * 2), newButtonHeight, newButtonWidth, magenta, tron_whi, newLabelFont)
+buttonc = Button(newLabelPadding * " " + "          CLEAR", newOriginX, newOriginY + (newButtonHeight * 3) + (newSpacing * 3), newButtonHeight, newButtonWidth, magenta, tron_whi, newLabelFont)
+button0 = Button(" " * 18 + "0", newOriginX + newButtonWidth + newSpacing, newOriginY + (newButtonHeight * 3) + (newSpacing * 3), newButtonHeight, newButtonWidth, magenta, tron_whi, newLabelFont)
+buttone = Button(newLabelPadding * " " + "          ENTER", newOriginX + (newButtonWidth * 2) + (newSpacing * 2), newOriginY + (newButtonHeight * 3) + (newSpacing * 3), newButtonHeight, newButtonWidth, magenta, tron_whi, newLabelFont)
 
 
 #############################
@@ -266,7 +266,7 @@ def menuPin (argv):
     # Init screen
     kalipi.screen()
     # Outer Border
-    kalipi.border(tron_blu)
+    kalipi.border(magenta)
 
     #############################
     ##        Buttons          ##
@@ -416,7 +416,7 @@ def menuPin (argv):
                             button(num)
                             if c > 0:
                                 pygame.draw.rect(screen.canvas, black, (newOriginX, newOriginX,buttonWidth * 3, buttonHeight),0)
-                                new_titleButton = Button("      " + c * "* ", newOriginX, newOriginX, buttonHeight, buttonWidth * 3  + spacing * 2, tron_blu, green, newTitleFont * 2)
+                                new_titleButton = Button("      " + c * "* ", newOriginX, newOriginX, buttonHeight, buttonWidth * 3  + spacing * 2, magenta, green, newTitleFont * 2)
                                 new_titleButton.draw()
                                 if c > 15:
                                     c = 0
@@ -432,7 +432,7 @@ def menuPin (argv):
                         button(num)
                         if c > 0:
                             pygame.draw.rect(screen.canvas, black, (newOriginX, newOriginX,buttonWidth * 3, buttonHeight),0)
-                            new_titleButton = Button("      " + c * "* ", newOriginX, newOriginX, buttonHeight, buttonWidth * 3  + spacing * 2, tron_blu, green, newTitleFont * 2)
+                            new_titleButton = Button("      " + c * "* ", newOriginX, newOriginX, buttonHeight, buttonWidth * 3  + spacing * 2, magenta, green, newTitleFont * 2)
                             new_titleButton.draw()
                             if c > 15:
                                 c = 0
@@ -473,7 +473,7 @@ def menuPin (argv):
                             button(num)
                             if c > 0:
                                 pygame.draw.rect(screen.canvas, black, (newOriginX, newOriginX,buttonWidth * 3, buttonHeight),0)
-                                new_titleButton = Button("      " + c * "* ", newOriginX, newOriginX, buttonHeight, buttonWidth * 3  + spacing * 2, tron_blu, green, newTitleFont * 2)
+                                new_titleButton = Button("      " + c * "* ", newOriginX, newOriginX, buttonHeight, buttonWidth * 3  + spacing * 2, magenta, green, newTitleFont * 2)
                                 new_titleButton.draw()
                                 if c > 15:
                                     c = 0
@@ -488,7 +488,7 @@ def menuPin (argv):
                         button(num)
                         if c > 0:
                             pygame.draw.rect(screen.canvas, black, (newOriginX, newOriginX,buttonWidth * 3, buttonHeight),0)
-                            new_titleButton = Button("      " + c * "* ", newOriginX, newOriginX, buttonHeight, buttonWidth * 3  + spacing * 2, tron_blu, green, newTitleFont * 2)
+                            new_titleButton = Button("      " + c * "* ", newOriginX, newOriginX, buttonHeight, buttonWidth * 3  + spacing * 2, magenta, green, newTitleFont * 2)
                             new_titleButton.draw()
                             if c > 15:
                                 c = 0

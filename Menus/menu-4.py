@@ -15,16 +15,16 @@ from kalipi import *
 ##        Buttons          ##
 
 # define all of the buttons
-titleButton = Button("                      EvilAP - Mana", originX, originX, buttonHeight, buttonWidth * 3 + spacing * 2, tron_blu, tron_ora, titleFont)
-button1 = Button(labelPadding * " " + "   NAT Full", originX, originY, buttonHeight, buttonWidth, tron_blu, tron_whi, labelFont)
-button2 = Button(labelPadding * " " + " NAT Simple", originX + buttonWidth + spacing, originY, buttonHeight, buttonWidth, tron_blu, tron_whi, labelFont)
-button3 = Button(labelPadding * " " + "  No Upstr.", originX + (buttonWidth * 2) + (spacing * 2), originY, buttonHeight, buttonWidth, tron_blu, tron_whi, labelFont)
-button4 = Button(labelPadding * " " + "   NU-EAP", originX, originY + buttonHeight + spacing, buttonHeight, buttonWidth, tron_blu, tron_whi, labelFont)
-button5 = Button(labelPadding * " " + "NU-EAP only", originX + buttonWidth + spacing, originY + buttonHeight + spacing, buttonHeight, buttonWidth, tron_blu, tron_whi, labelFont)
-button6 = Button(labelPadding * " " + "    NU-All", originX + (buttonWidth * 2) + (spacing * 2), originY + buttonHeight + spacing, buttonHeight, buttonWidth, tron_blu, tron_whi, labelFont)
-button7 = Button(labelPadding * " " + "       <<<", originX, originY + (buttonHeight * 2) + (spacing * 2), buttonHeight, buttonWidth, tron_blu, tron_whi, labelFont)
-button8 = Button(labelPadding * " " + "   Cleanup", originX + buttonWidth + spacing, originY + (buttonHeight * 2) + (spacing * 2), buttonHeight, buttonWidth, tron_blu, tron_whi, labelFont)
-button9 = Button(labelPadding * " " + "       >>>", originX + (buttonWidth * 2) + (spacing * 2), originY + (buttonHeight * 2) + (spacing * 2), buttonHeight, buttonWidth, tron_blu, tron_whi, labelFont)
+titleButton = Button("                      EvilAP - Mana", originX, originX, buttonHeight, buttonWidth * 3 + spacing * 2, magenta, tron_ora, titleFont)
+button1 = Button(labelPadding * " " + "   NAT Full", originX, originY, buttonHeight, buttonWidth, magenta, tron_whi, labelFont)
+button2 = Button(labelPadding * " " + " NAT Simple", originX + buttonWidth + spacing, originY, buttonHeight, buttonWidth, magenta, tron_whi, labelFont)
+button3 = Button(labelPadding * " " + "  No Upstr.", originX + (buttonWidth * 2) + (spacing * 2), originY, buttonHeight, buttonWidth, magenta, tron_whi, labelFont)
+button4 = Button(labelPadding * " " + "   NU-EAP", originX, originY + buttonHeight + spacing, buttonHeight, buttonWidth, magenta, tron_whi, labelFont)
+button5 = Button(labelPadding * " " + "NU-EAP only", originX + buttonWidth + spacing, originY + buttonHeight + spacing, buttonHeight, buttonWidth, magenta, tron_whi, labelFont)
+button6 = Button(labelPadding * " " + "    NU-All", originX + (buttonWidth * 2) + (spacing * 2), originY + buttonHeight + spacing, buttonHeight, buttonWidth, magenta, tron_whi, labelFont)
+button7 = Button(labelPadding * " " + "       <<<", originX, originY + (buttonHeight * 2) + (spacing * 2), buttonHeight, buttonWidth, magenta, tron_whi, labelFont)
+button8 = Button(labelPadding * " " + "   Cleanup", originX + buttonWidth + spacing, originY + (buttonHeight * 2) + (spacing * 2), buttonHeight, buttonWidth, magenta, tron_whi, labelFont)
+button9 = Button(labelPadding * " " + "       >>>", originX + (buttonWidth * 2) + (spacing * 2), originY + (buttonHeight * 2) + (spacing * 2), buttonHeight, buttonWidth, magenta, tron_whi, labelFont)
 
 
 # Define each button press action
@@ -41,7 +41,7 @@ def button(number):
                 button1.draw()
                 pygame.display.update()
         else:
-                button1.fntColor = tron_light
+                button1.fntColor = magenta
                 button1.draw()
                 pygame.display.update()
         return
@@ -57,7 +57,7 @@ def button(number):
                 button2.draw()
                 pygame.display.update()
         else:
-                button2.fntColor = tron_light
+                button2.fntColor = magenta
                 button2.draw()
                 pygame.display.update()
         return
@@ -73,7 +73,7 @@ def button(number):
                 button3.draw()
                 pygame.display.update()
         else:
-                button3.fntColor = tron_light
+                button3.fntColor = magenta
                 button3.draw()
                 pygame.display.update()
         return
@@ -89,7 +89,7 @@ def button(number):
                 button4.draw()
                 pygame.display.update()
         else:
-                button4.fntColor = tron_light
+                button4.fntColor = magenta
                 button4.draw()
                 pygame.display.update()
         return
@@ -105,7 +105,7 @@ def button(number):
                 button5.draw()
                 pygame.display.update()
         else:
-                button5.fntColor = tron_light
+                button5.fntColor = magenta
                 button5.draw()
                 pygame.display.update()
         return
@@ -121,7 +121,7 @@ def button(number):
                 button6.draw()
                 pygame.display.update()
         else:
-                button6.fntColor = tron_light
+                button6.fntColor = magenta
                 button6.draw()
                 pygame.display.update()
         return
@@ -143,19 +143,19 @@ def button(number):
         #Cleanup
         script="/usr/bin/sudo /bin/bash " + os.environ["MENUDIR"] + "mana/cleanmana.sh"
         kalipi.run_cmd(script)
-        button1.fntColor = tron_light
+        button1.fntColor = magenta
         button1.draw()
-        button2.fntColor = tron_light
+        button2.fntColor = magenta
         button2.draw()
-        button3.fntColor = tron_light
+        button3.fntColor = magenta
         button3.draw()
-        button4.fntColor = tron_light
+        button4.fntColor = magenta
         button4.draw()
-        button5.fntColor = tron_light
+        button5.fntColor = magenta
         button5.draw()
-        button6.fntColor = tron_light
+        button6.fntColor = magenta
         button6.draw()
-        button8.fntColor = tron_light
+        button8.fntColor = magenta
         button8.draw()
         return
 
@@ -177,7 +177,7 @@ def menu4():
     # Init screen
     kalipi.screen()
     # Outer Border
-    kalipi.border(tron_blu)
+    kalipi.border(magenta)
 
     #############################
     ##        Buttons          ##
