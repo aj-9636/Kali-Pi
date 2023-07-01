@@ -67,7 +67,6 @@ button5 = Button(labelPadding * " " + "   Firelamb", originX + buttonWidth + spa
 button6 = Button(labelPadding * " " + "  Mana Loud", originX + (buttonWidth * 2) + (spacing * 2), originY + buttonHeight + spacing, buttonHeight, buttonWidth, magenta, tron_inverse,labelFont)
 button7 = Button(labelPadding * " " + "       <<<", originX, originY + (buttonHeight * 2) + (spacing * 2), buttonHeight, buttonWidth, magenta,tron_inverse, labelFont)
 button8 = Button(labelPadding * " " + "  DNS2Proxy", originX + buttonWidth + spacing, originY + (buttonHeight * 2) + (spacing * 2), buttonHeight, buttonWidth, magenta, tron_inverse, labelFont)
-button9 = Button(labelPadding * " " + "       >>>", originX + (buttonWidth * 2) + (spacing * 2), originY + (buttonHeight * 2) + (spacing * 2), buttonHeight, buttonWidth, magenta, tron_inverse, labelFont)
 
 
 # def make_button(button):
@@ -210,15 +209,7 @@ def button(number):
                 pygame.display.update()
         return
 
-    if number == 9:
-        if button9.disable == 1:
-            return
 
-        # Next page
-        pygame.quit()
-        page=os.environ["MENUDIR"] + "menu-9.py"
-        os.execvp("python", ["python", page])
-        sys.exit()
 ##        Buttons          ##
 #############################
 
@@ -355,14 +346,7 @@ def menu5(argv):
             button8.color = magenta
             button8.draw()
 
-    # Button 9
-    button9.disable = 0  # "1" disables button
 
-    if button9.disable == 1:
-        button9.draw()
-    else:
-        # Add button launch code here
-        button9.draw()
 
     ##        Buttons          ##
     #############################
