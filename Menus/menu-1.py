@@ -9,7 +9,7 @@ from kalipi import *
 
 # Check VNC status
 def check_vnc():
-    if 'vnc :1' in subprocess.getoutput('/bin/ps -ef'):
+    if 'vnc :2' in subprocess.getoutput('/bin/ps -ef'):
         return True
     else:
         return False
@@ -93,7 +93,7 @@ def button(number):
 	# VNC
     if check_vnc():
         kalipi.run_cmd("/usr/bin/vncserver -kill :2")
-        button5.fntColor = red
+        button5.fntColor = magenta
         button5.draw()
         pygame.display.update()
     else:
