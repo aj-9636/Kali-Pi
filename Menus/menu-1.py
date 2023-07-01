@@ -92,12 +92,12 @@ def button(number):
 
 	# VNC
     if check_vnc():
-        kalipi.run_cmd("/usr/bin/vncserver -kill :1")
+        kalipi.run_cmd("/usr/bin/vncserver -kill :2")
         button5.fntColor = magenta
         button5.draw()
         pygame.display.update()
     else:
-        kalipi.run_cmd("/usr/bin/vncserver :1")
+        kalipi.run_cmd("/usr/bin/vncserver :2")
         button5.fntColor = magenta
         button5.draw()
         pygame.display.update()
